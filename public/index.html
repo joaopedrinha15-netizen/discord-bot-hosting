@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Bot Hosting</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Discord Bot Panel</p>
+          <h1>Controle do bot</h1>
+        </div>
+        <div class="status-wrap">
+          <span id="status-indicator" class="status-dot offline"></span>
+          <span id="status-text">Offline</span>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="card config-card">
+          <h2>Configuração</h2>
+
+          <label for="bot-token">Token do bot</label>
+          <input id="bot-token" type="password" placeholder="Cole seu token do Discord" />
+
+          <div class="actions-row">
+            <button id="load-template" class="ghost">Carregar template</button>
+          </div>
+
+          <label for="bot-code">Código do bot</label>
+          <textarea id="bot-code" spellcheck="false" placeholder="Cole o código do botão aqui..."></textarea>
+
+          <div class="main-actions">
+            <button id="start-bot" class="primary">Iniciar bot</button>
+            <button id="stop-bot" class="danger">Parar bot</button>
+          </div>
+        </section>
+
+        <aside class="card infos-card">
+          <h2>Informações</h2>
+          <ul>
+            <li>O bot roda em processo separado</li>
+            <li>Útil para VPS, Render ou Railway</li>
+            <li>Mostra status e logs ao vivo</li>
+            <li>Use um servidor sempre ligado para 24/7</li>
+          </ul>
+        </aside>
+      </main>
+
+      <section class="card log-card">
+        <div class="log-header">
+          <h2>Logs</h2>
+          <button id="clear-logs" class="ghost small">Limpar</button>
+        </div>
+        <pre id="logs">Aguardando inicialização...</pre>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
